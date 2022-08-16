@@ -3,7 +3,6 @@
    License: none (public domain)
 */
 
-/*Reset Styles*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -49,48 +48,5 @@ table {
 }
 
 html *{
-  box-sizing:border-box;
-}
-
-html{
-  font-size:16px
-}
-
-h2{
-  font-size:1.5rem
-}
-
-h3{
-  font-size:1.2rem
-}
-
-/*Container and Container Parts*/
-
-.container{
-  display:flex;
-  height:100vh;
-}
-
-.leftside{
-  background-color:white;
-  height:100%;
-  width:100%
-}
-
-.rightside{
-  background-color:green;
-  height:100%;
-  width:100%;
-  padding:0 50p 0 200px;
-  display:flex;
-  justify-content:flex-start;
-  align-items:center
-}
-
-.rightside_container{
-  
-}
-
-form > ul:first-child{
-  display:flex;
+	box-sizing: border-box;
 }

@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Green Frog English School</title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Frog English School</title>
+    <link rel="stylesheet" href="Styles/reset.css" />
+    <link rel="stylesheet" href="Styles/style.css" />
     <script scr="script.js" defer></script>
-</head>
+  </head>
 
-<body>
-  <div class="container">
-    <div class="leftside"></div>
-    <div class="rightside">
-      <div class="rightside_container">
-        <h3>Green Frog English School</h3>
-        <h2>Make an account now</h2>
-        <form action="#" method="post">
-            <div>
-                <p><label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="firstname"></p>
-                <p><label for="lastname">Last Name</label><input type="text" id="lastname" name="lastname"></p>
-                <p><label for="age">Age</label><input type="number" id="age" name="age"></p>
+  <body>
+    <div class="container">
+      <div class="leftside"></div>
+      <div class="rightside">
+        <div class="rightside_container">
+          <h3>Green Frog English School</h3>
+          <h2>Make an account now</h2>
+          <form action="#" method="post">
+            <div class="fullname">
+              <p>
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" required/>
+                <span></span>
+              </p>
+              <p>
+                <label for="lastname">Last Name</label
+                ><input type="text" id="lastname" name="lastname" required/>
+                <span></span>
+              </p>
+              <p>
+                <label for="age">Age</label
+                ><input type="number" id="age" name="age" required min="18"/>
+                <span></span>
+              </p>
             </div>
-            <p><label for="email">Email</label><input type="email" id="email" name="email"></p>
-            <p><label for="password">Password</label><input type="text" id="password" name="password"></p>
-            <p><label for="confirm-password">Confirm Password</label><input type="text" id="confirm-password" name="confirm-password"></p>
-            <div>
-                <h4>Would you like to subscribe to our newsletter?</h4>
-                <p><label for="yes">Yes</label>
-                    <input type="radio" id="yes" name="newsletter" value="yes"></input>
-                    <label for="no">No</label>
-                         <input type="radio" id="no" name="newsletter" value="no"></input></p>
-            </div>
-        </form>
-      </div>
-
-    </div>
+            <p>
+              <label for="email">Email</label
+              ><input type="email" id="email" name="email" required/>
+              <span></span>
+            </p>
+            <p>
+              <label for="password">Password</label
+              ><input type="text" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+              <span></span>
+            </p>
+            <p>
+              <label for="confirm-password">Confirm Password</label
+              ><input
+                type="text"
+                id="confirm-password"
+                name="confirm-password" required/>
+                <span></span>
+            </p>
+            
+            <fieldset>
+              <legend>Would you like to subscribe to our newsletter?</legend>
+              <label for="yes">Yes</label>
+              <input type="radio" id="yes" name="newsletter" value="yes"></input>
+              <label for="no">No</label>
+              <input type="radio" id="no" name="newsletter" value="no"></input>
+            </fieldset>
+            <div><button type="submit">Submit</button></div>
+            <p>Already have an account? <a href="/index.html">Log In</a></p>
+          </form>
         </div>
-</body>
-
+      </div>
+    </div>
+  </body>
 </html>

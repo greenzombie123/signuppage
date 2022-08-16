@@ -1,0 +1,245 @@
+/*Imported Font*/
+
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@600&family=Roboto:wght@100&display=swap");
+
+/*General Styles*/
+
+html {
+  font-size: 16px;
+}
+
+:root {
+  --text_color: white;
+}
+
+/*Container*/
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/*Leftside & Rightside*/
+
+.leftside,
+.rightside {
+  height: 100%;
+  width: 50vw;
+}
+
+.leftside {
+  background-color: white;
+}
+
+.rightside {
+  background-color: green;
+  padding: 0 300px 0 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*Rightside Container*/
+
+.rightside_container {
+  width: 100%;
+}
+
+/*Rightside Container Uniform Styling*/
+
+label,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+p,
+fieldset {
+  font-size: 1.5rem;
+  padding-bottom: 1.5em;
+}
+
+label,
+legend {
+  color: var(--text_color);
+  font-size: 80%;
+}
+
+.rightside_container > h2,
+.rightside_container > h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text_color);
+}
+
+/* Rightside Container Single Styles*/
+
+h3 {
+  font-size: 1.8rem;
+  font-family: "DynaPuff", cursive;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+form > div {
+  display: flex;
+  column-gap: 10px;
+}
+
+input {
+  padding: 10px;
+}
+
+form > div > p:last-child {
+  flex: 0 1.7 auto;
+}
+
+fieldset {
+  border: 1px solid white;
+  padding: 10px;
+}
+
+fieldset > label {
+  font-size: 100%;
+}
+
+input[type="radio"] {
+  appearance: none;
+  position: relative;
+  top: 2px;
+  width: 1em;
+  height: 1em;
+  border: 2px solid grey;
+  background-color: white;
+}
+
+input[type="radio"]::before {
+  position: absolute;
+  content: '✔';
+  color: black;
+  visibility: hidden;
+  font-size: 1em;
+  top: -4px;
+  left: 0;
+}
+
+input[type="radio"]:checked::before {
+  visibility: visible;
+}
+
+fieldset + div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  appearance: none;
+  width: 40%;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 2rem;
+  margin-top: 30px;
+  background-color: yellow;
+}
+
+form > p:last-child{
+  margin-top: 20px;
+  color: var(--text_color);
+  font-size: 1em;
+  text-align: center;
+}
+
+p:last-child > a{
+  color: var(--text_color);
+}
+
+/*Required Message*/
+
+input + span{
+  position: relative;
+}
+
+input:required:invalid + span::before{
+  position: absolute;
+  content: "Required";
+  top: -2.2rem;
+  right: 3px;
+  background-color: red;
+  color: black;
+  font-size: 65%;
+  padding: 3px;
+}
+
+input:required:valid + span::before{
+  position: absolute;
+  content: "Ok!";
+  top: -2.7rem;
+  right: 3px;
+  border-radius: 5px;
+  background-color: rgb(194, 194, 242);
+  border: 4px solid rgb(91, 91, 249);
+  color: black;
+  font-size: 65%;
+  padding: 3px;
+}
+
+/*Require Message for Age*/
+
+input[type="number"]:required:invalid + span::before{
+  position: absolute;
+  content: "Req";
+  top: -2.2rem;
+  right: 3px;
+  background-color: red;
+  color: black;
+  font-size: 65%;
+  padding: 3px;
+}
+
+input[type="number"]:required:valid + span::before{
+  position: absolute;
+  content: "Ok!";
+  top: -2.7rem;
+  right: 3px;
+  border-radius: 5px;
+  background-color: rgb(194, 194, 242);
+  border: 4px solid rgb(91, 91, 249);
+  color: black;
+  font-size: 65%;
+  padding: 3px;
+}
+
+/*Password Control Form*/
+
+input[id="password"]:required:invalid + span::before{
+  position: absolute;
+  content: "Must have 8 or more characters including one lowercase letter, one uppercase letter, one number, and one special character.";
+  top: -3.2rem;
+  right: 3px;
+  background-color: red;
+  color: black;
+  font-size: 65%;
+  padding: 3px;
+  width: 400px;
+}
+/* Must contain one lowercase letter, one uppercase letter, one number, and one special character */
+input[id="password"]:required:valid + span::before{
+  position: absolute;
+  content: "Ok!";
+  top: -2.7rem;
+  right: 3px;
+  border-radius: 5px;
+  background-color: rgb(194, 194, 242);
+  border: 4px solid rgb(91, 91, 249);
+  color: black;
+  font-size: 65%;
+  padding: 3px;
+}
