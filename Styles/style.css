@@ -122,7 +122,7 @@ input[type="radio"] {
 
 input[type="radio"]::before {
   position: absolute;
-  content: '✔';
+  content: "✔";
   color: black;
   visibility: hidden;
   font-size: 1em;
@@ -140,7 +140,7 @@ fieldset + div {
   align-items: center;
 }
 
-button{
+button {
   appearance: none;
   width: 40%;
   border-radius: 50px;
@@ -150,24 +150,24 @@ button{
   background-color: yellow;
 }
 
-form > p:last-child{
+form > p:last-child {
   margin-top: 20px;
   color: var(--text_color);
   font-size: 1em;
   text-align: center;
 }
 
-p:last-child > a{
+p:last-child > a {
   color: var(--text_color);
 }
 
 /*Required Message*/
 
-input + span{
+input + span {
   position: relative;
 }
 
-input:required:invalid + span::before{
+input:required:invalid + span::before {
   position: absolute;
   content: "Required";
   top: -2.2rem;
@@ -178,7 +178,7 @@ input:required:invalid + span::before{
   padding: 3px;
 }
 
-input:required:valid + span::before{
+input:required:valid + span::before {
   position: absolute;
   content: "Ok!";
   top: -2.7rem;
@@ -193,7 +193,7 @@ input:required:valid + span::before{
 
 /*Require Message for Age*/
 
-input[type="number"]:required:invalid + span::before{
+input[type="number"]:required:invalid + span::before {
   position: absolute;
   content: "Req";
   top: -2.2rem;
@@ -204,7 +204,7 @@ input[type="number"]:required:invalid + span::before{
   padding: 3px;
 }
 
-input[type="number"]:required:valid + span::before{
+input[type="number"]:required:valid + span::before {
   position: absolute;
   content: "Ok!";
   top: -2.7rem;
@@ -219,23 +219,22 @@ input[type="number"]:required:valid + span::before{
 
 /*Password Control Form*/
 
-input[id="password"]:required:invalid + span::before{
+input[id="password"]:required:invalid + span::before {
   position: absolute;
-  content: "Must have 8 or more characters including one lowercase letter, one uppercase letter, one number, and one special character.";
-  top: -3.2rem;
-  right: 3px;
+  content: "Required";
+  top: -4.6rem;
+  right: -542px;
   background-color: red;
   color: black;
   font-size: 65%;
   padding: 3px;
-  width: 400px;
 }
-/* Must contain one lowercase letter, one uppercase letter, one number, and one special character */
-input[id="password"]:required:valid + span::before{
+
+input[id="password"]:required:valid + span::before {
   position: absolute;
   content: "Ok!";
-  top: -2.7rem;
-  right: 3px;
+  top: -5.2rem;
+  right: -542px;
   border-radius: 5px;
   background-color: rgb(194, 194, 242);
   border: 4px solid rgb(91, 91, 249);
@@ -243,3 +242,17 @@ input[id="password"]:required:valid + span::before{
   font-size: 65%;
   padding: 3px;
 }
+
+input[id="password"]:required + span + span {
+  font-size: .8em;
+  color: black;
+}
+
+/* input[id="password"]:required + span + span::before {
+  content: "Must include one of each: a lowercase, an uppercase, and a number";
+  position: absolute;
+  top: 2.7rem;
+  font-size: 50%;
+  padding-bottom: 0;
+  color: red;
+}  */

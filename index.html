@@ -7,7 +7,7 @@
     <title>Green Frog English School</title>
     <link rel="stylesheet" href="Styles/reset.css" />
     <link rel="stylesheet" href="Styles/style.css" />
-    <script scr="script.js" defer></script>
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -42,8 +42,9 @@
             </p>
             <p>
               <label for="password">Password</label
-              ><input type="text" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/>
+              ><input type="text" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter 8 or more characters"/>
               <span></span>
+              <span>*Must include one of each: a lowercase, an uppercase, and a number.</span>
             </p>
             <p>
               <label for="confirm-password">Confirm Password</label
