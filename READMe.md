@@ -1,4 +1,4 @@
-# Sign Up Project
+# Sign Up Page Project
 
 This project contains two components: a landing page and a sign up page. 
 
